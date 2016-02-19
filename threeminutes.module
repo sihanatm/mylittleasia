@@ -1,5 +1,15 @@
 <?php
 
+function threeminutes_help($path, $arg) {
+switch($path) {
+
+case "admin/help#threeminutes":
+return '<p>' . t("A three minute module") . '</p>';
+break;
+}
+
+}
+
 function threeminutes_menu() {
 $items['threeminutes-page'] = array(
 'page callback' => 'threeminutes_page',
@@ -11,5 +21,6 @@ return $items;
 
 function threeminutes_page() {
 
-return "Hello World";
+return "Hello World how you doing";
 }
+
