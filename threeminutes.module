@@ -1,0 +1,15 @@
+<?php
+
+function threeminutes_menu() {
+$items['threeminutes-page'] = array(
+'page callback' => 'threeminutes_page',
+'access arguments' => array('access content'),
+'type' => MENU_CALLBACK,
+);
+return $items;
+}
+
+function threeminutes_page() {
+
+return "Hello World";
+}

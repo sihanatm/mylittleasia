@@ -1,0 +1,5 @@
+name = Three Minutes Module
+description = "Demo how to build module"
+package = Build a module
+core = 7.x
+files[] = threeminutes.module
