@@ -47,3 +47,5 @@ $query = db_select('node', 'n')
 return $query;
 }
 
+echo "Second mistake";
+
