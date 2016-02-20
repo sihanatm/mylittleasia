@@ -24,3 +24,26 @@ function threeminutes_page() {
 return "Hello World how you doing";
 }
 
+function threeminutes_contents() {
+
+// Get today's date
+$today = getdate();
+//calculate the date a week ago.
+
+$start_time = mktime(0, 0, 0, $today['mon'],($today['mday'] - 7), $today['year']);
+
+// Get all post from one week ago to the present.
+
+$end_time = time();
+
+// use database API to retrieve current posts.
+
+$query = db_select('node', 'n')
+->fields('n', array('nid', 'title', 'created'))
+->condition('status', 1)
+->condition('created', array($start_time, $end_time))
+->orderBy('created', 'DESC')
+->execute();
+return $query;
+}
+
